@@ -377,18 +377,46 @@ const App: React.FC = () => {
              {/* Emergency */}
              <div className="bg-red-50 p-5 rounded-lg border border-red-100">
                <h3 className="text-sm font-bold text-red-400 uppercase tracking-wider mb-3">Emergency</h3>
-               <div className="grid grid-cols-2 gap-4">
-                 <div onClick={() => window.open('tel:110')} className="bg-white p-3 rounded text-center shadow-sm cursor-pointer active:scale-95 transition-transform">
-                    <div className="text-lg font-bold text-stone-800">110</div>
-                    <div className="text-[10px] text-stone-400">Police</div>
+               <div className="space-y-3">
+                 {/* Standard */}
+                 <div className="grid grid-cols-2 gap-3">
+                   <div onClick={() => window.open('tel:110')} className="bg-white p-3 rounded text-center shadow-sm cursor-pointer active:scale-95 transition-transform">
+                      <div className="text-lg font-bold text-stone-800">110</div>
+                      <div className="text-[10px] text-stone-400">Police</div>
+                   </div>
+                   <div onClick={() => window.open('tel:119')} className="bg-white p-3 rounded text-center shadow-sm cursor-pointer active:scale-95 transition-transform">
+                      <div className="text-lg font-bold text-stone-800">119</div>
+                      <div className="text-[10px] text-stone-400">Ambulance</div>
+                   </div>
                  </div>
-                 <div onClick={() => window.open('tel:119')} className="bg-white p-3 rounded text-center shadow-sm cursor-pointer active:scale-95 transition-transform">
-                    <div className="text-lg font-bold text-stone-800">119</div>
-                    <div className="text-[10px] text-stone-400">Ambulance</div>
+
+                 {/* JNTO */}
+                 <div className="bg-white p-3 rounded shadow-sm">
+                    <div className="flex justify-between items-center mb-1">
+                        <span className="text-xs font-bold text-stone-600">訪日外國人熱線 (JNTO)</span>
+                        <a href="tel:05038162787" className="bg-stone-800 text-white p-1 rounded-full">
+                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </a>
+                    </div>
+                    <div className="text-xl font-bold text-stone-800 font-mono">050-3816-2787</div>
+                    <div className="text-[10px] text-stone-400 mt-1">24h • 英/中/韓 • 生病受傷事故</div>
                  </div>
-                 <div className="col-span-2 bg-white p-3 rounded text-center shadow-sm">
-                    <div className="text-sm font-bold text-stone-800">台北駐日經濟文化代表處</div>
-                    <div className="text-xs text-stone-500 mt-1">那霸分處: 098-862-7008</div>
+
+                 {/* Fukuoka Office */}
+                 <div className="bg-white p-3 rounded shadow-sm">
+                    <div className="text-xs font-bold text-stone-600 mb-2">台北駐福岡經濟文化辦事處</div>
+                    <div className="flex justify-between items-center border-b border-stone-100 pb-2 mb-2">
+                       <span className="text-xs text-stone-500">上班時間</span>
+                       <a href="tel:0927342810" className="text-sm font-bold text-stone-800 font-mono flex items-center gap-1">
+                          092-734-2810
+                       </a>
+                    </div>
+                    <div className="flex justify-between items-center">
+                       <span className="text-xs text-red-500 font-bold">急難救助</span>
+                       <a href="tel:09019229740" className="text-lg font-bold text-red-600 font-mono flex items-center gap-1">
+                          090-1922-9740
+                       </a>
+                    </div>
                  </div>
                </div>
              </div>
